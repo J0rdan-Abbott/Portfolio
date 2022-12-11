@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tangerine, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    background-image: url(/BlackJack/Images/Table-Texture.jpeg);
+    background-size: cover;
+}
+
+h1 {
+    color: rgb(252, 191, 38);
+    font-size: 7rem;
+    padding: 2rem;
+    text-decoration: 0.25rem underline;
+}
+
+p {
+    color: whitesmoke;
+    font-size: 3rem;
+    padding: 1rem;
+    margin-top: 0.2rem;
+}
+
+.button {
+    color: rgb(252, 191, 38);
+    font-size: 2rem;
+    font-family: qwigley;
+    background: #333;
+    border: none;
+    padding: 0.5rem 1rem 0.3rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(1.07);
+    background: #555;
+}
+
+.position {
+    margin-top: 5.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(252, 191, 38);
+    font-size: 2rem;
+    font-family: qwigley;
+    padding: 1rem 2rem 0.6rem 2rem;
+    background: #333;
+    transition: 0.2s;
+    position: relative;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+a span {
+    border-radius: 15px;
+}
+
+a span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+    transition: transform 0.2s;
+    height: 3px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+a:hover span:nth-child(1) {
+    background: white;
+    transform: scaleX(1);
+}
+
+a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.2s;
+    transition: transform 0.2s;
+    height: 100%;
+    width: 3px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition-delay: 0.2s;
+}
+
+a:hover span:nth-child(2) {
+    background: white;
+    transform: scaleY(1);
+}
+
+a span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s;
+    transition: transform 0.2s;
+    height: 3px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+a:hover span:nth-child(3) {
+    background: white;
+    transform: scaleX(1);
+}
+
+a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+    transition: transform 0.2s;
+    height: 100%;
+    width: 3px;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition-delay: 0.2s;
+}
+
+a:hover span:nth-child(4) {
+    background: white;
+    transform: scaleY(1);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: visible;
+}
+
+#player-el {
+    font-size: 2rem;
+    margin-top: 0.4rem;
+    text-decoration: 1px underline;
+}
