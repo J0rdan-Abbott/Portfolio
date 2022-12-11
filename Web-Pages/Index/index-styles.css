@@ -17,6 +17,21 @@ body {
     background-color: #07e1f5;
 }
 
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(51, 51, 51);
+    border-left: 2px solid rgba(225, 225, 225, .09);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg, #07e1f5, #ff328e);
+    border-radius: 100vw;
+    border: rgba(51, 51, 51);
+}
+
 .navbar-container {
     display: flex;
     flex-direction: row;
@@ -202,8 +217,4 @@ body {
     color: #61dbfb;
     width: 2rem;
     margin-right: 0.7rem;
-}
-
-.coding-icons .angular-logo {
-    width: 3rem;
 }
