@@ -118,6 +118,7 @@ body {
     backdrop-filter: blur(6px);
     margin-top: 5rem;
     border-radius: 0.5rem;
+    position: relative;
 }
 
 .about-content h2 {
@@ -125,7 +126,19 @@ body {
     padding: 2rem 2rem 0 2rem;;
 }
 
+.about-image {
+    font-family: Lobster;
+    font-size: 10rem;
+    padding: 2.8rem 4rem 4rem 3.5rem;
+    background: #07e1f5;
+    border-radius: 50%;
+    position: absolute;
+    top: 3rem;
+    right: 9rem;
+}
+
 .about-content p {
+    width: 45%;
     font-size: 1rem;
     padding: 0 2rem 0 2rem;
     margin-top: 1rem;
@@ -217,4 +230,27 @@ body {
     color: #61dbfb;
     width: 2rem;
     margin-right: 0.7rem;
+}
+
+.coding-icons .git-logo {
+    width: 3rem;
+    margin-right: 0.7rem;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: auto;
+    height: 1000px; /* placeholder height */
+    justify-content: center;
+    margin-top: 5rem;
+    perspective: 1000px;
+    background: #333; /* placeholder background */
+}
+
+.projects-title {
+    font-size: 3rem;
+    text-decoration: underline;
+    text-decoration-color: #07e1f5;
 }
