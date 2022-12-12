@@ -332,8 +332,9 @@ body {
     z-index: 1;
 }
 
-.projects-card-img {
-    width: 200px;
+.projects-card img {
+    width: 202px;
+    height: 152px;
     border-radius: 1rem;
 }
 
