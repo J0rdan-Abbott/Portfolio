@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,28 +8,50 @@ body {
     min-height: 100vh;
     font-size: 10px;
     font-family: Helvetica, sans-serif, arial;
-    background-image: url(/Images/Background-Image.jpeg);
+    background-image: var(--background-image);
     background-size: cover;
-    color: #fff;
+    color: var(--text-color);
+}
+
+:root {
+    --background-image: url(/Images/Background-Image.jpeg);
+    --text-color: #fff;
+    --primary-color: #07e1f5;
+    --secondary-color: #ff328e;
+    --box-shadow: 0 8px 32px #07e1f5;
+    --borders: 0.15rem solid rgba(225, 225, 225, .09);
+    --text-shadow-primary: 0 0 5px #333;
+    --text-shadow-secondary: 0 0 5px #000;
+}
+
+.light-mode {
+    --background-image: url(/Images/background-light.jpeg);
+    --text-color: #333;
+    --primary-color: #ff328e;
+    --secondary-color: #07e1f5;
+    --box-shadow: 0 8px 32px #ff328e;
+    --borders: 0.15rem solid rgba(225, 225, 225, .45);
+    --text-shadow-primary: 0 0 5px #fff;
+    --text-shadow-secondary: 0 0 10px #fff;
 }
 
 .active-page {
-    background-color: #07e1f5;
+    background-color: var(--primary-color);
+    text-shadow: var(--text-shadow-primary);
 }
 
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.7rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(51, 51, 51);
-    border-left: 2px solid rgba(225, 225, 225, .09);
+    background: rgba(51, 51, 51, 1);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(-45deg, #07e1f5, #ff328e);
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
     border-radius: 100vw;
-    border: rgba(51, 51, 51);
+    border: rgba(51, 51, 51, 1);
 }
 
 .navbar-container {
@@ -40,9 +62,8 @@ body {
     background: rgba(51, 51, 51, .25);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 8px 32px #07e1f5;
-    border-bottom: 2px solid rgba(225, 225, 225, .09);
-    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    border-bottom: 0.15rem solid rgba(225, 225, 225, .09);
     align-items: center;
 }
 
@@ -50,7 +71,7 @@ body {
 .name-logo {
     font-size: 1.9rem;
     padding: 0.9rem 0 1rem 1rem;
-    color: #07e1f5;
+    color: var(--primary-color);
 }
 
 /* navbar */
@@ -58,6 +79,7 @@ body {
     list-style: none;
     display: flex;
     font-size: 1.3rem;
+    margin-left: 14rem;
 }
 
 .navbar-links li {
@@ -67,18 +89,20 @@ body {
 .navbar-links li a {
     padding: 1rem;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     transition: all 0.2s linear;
     border-radius: 0.5rem;
 }
 
 .navbar-links li a:hover {
-    background-color: #ff328e;
+    background-color: var(--secondary-color);
+    text-shadow: var(--text-shadow-secondary);
 }
 
 /* social links */
 .social-links {
     padding: 1rem;
+    margin-left: auto;
 }
 
 .social-links a {
@@ -86,16 +110,25 @@ body {
     padding: 0.6rem;
     border-radius: 0.5rem;
     transition: all 0.2s linear;
-    border: 0.15rem solid rgba(225, 225, 225, .09);
+    border: var(--borders);
     margin-left: 0.3rem;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .social-links a:first-child {
-    padding: 0.6rem 0.89rem;
+    margin-right: 2rem;
+    padding: 0.6rem 0.7rem;
+}
+
+.social-links a:nth-child(2) {
+    padding: 0.6rem 0.75rem;
 }
 
 .social-links a:nth-child(3) {
+    padding: 0.6rem 0.89rem;
+}
+
+.social-links a:nth-child(5) {
     padding: 0.6rem 0.7rem;
 }
 
@@ -104,8 +137,8 @@ body {
 }
 
 .social-links a:hover {
-    background: #ff328e;
-    text-shadow: 0 0 5px #000;
+    background: var(--secondary-color);
+    text-shadow: var(--text-shadow-secondary);
 }
 
 /* about me */
@@ -114,7 +147,8 @@ body {
     width: 80vw;
     margin: auto;
     background: rgba(51, 51, 51, .35);
-    border: rgba(225, 225, 225, .09);
+    border: var(--borders);
+    box-shadow: var(--box-shadow);
     backdrop-filter: blur(6px);
     margin-top: 5rem;
     border-radius: 0.5rem;
@@ -155,13 +189,13 @@ body {
 }
 
 .typed-text {
-    color: #07e1f5;
+    color: var(--primary-color);
 }
 
 .cursor {
     display: inline-block;
     width: 3px;
-    background-color: #fff;
+    background-color: var(--text-color);
     margin-left: 0.1rem;
     animation: blink 1s infinite;
 }
@@ -171,11 +205,11 @@ body {
 }
 
 @keyframes blink {
-    0% {background-color: #fff;}
-    49% {background-color: #fff;}
+    0% {background-color: var(--text-color);}
+    49% {background-color: var(--text-color);}
     50% {background-color: transparent;}
     99% {background-color: transparent;}
-    100% {background-color: #fff;}
+    100% {background-color: var(--text-color);}
 }
 
 /* about - icons */
@@ -252,5 +286,5 @@ body {
 .projects-title {
     font-size: 3rem;
     text-decoration: underline;
-    text-decoration-color: #07e1f5;
+    text-decoration-color: var(--primary-color);
 }
