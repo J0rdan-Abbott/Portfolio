@@ -56,11 +56,15 @@ const lightModeToggle = document.querySelector('#light-mode');
 const enableLightMode = () => {
     document.body.classList.add('light-mode');
     localStorage.setItem('lightMode', 'enabled');
+
+    lightModeToggle.classList.add('light-mode-active');
 };
 
 const disableLightMode = () => {
     document.body.classList.remove('light-mode');
     localStorage.removeItem('lightMode');
+
+    lightModeToggle.classList.remove('light-mode-active');
 };
 
 if (lightMode === "enabled") {

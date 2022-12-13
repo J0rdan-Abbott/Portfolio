@@ -35,6 +35,10 @@ body {
     --text-shadow-secondary: 0 0 10px #fff;
 }
 
+.light-mode-active {
+    background: #07e1f5;
+}
+
 .active-page {
     background-color: var(--primary-color);
     text-shadow: var(--text-shadow-primary);
