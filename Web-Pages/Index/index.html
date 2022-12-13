@@ -28,7 +28,7 @@
             </ul>
         </div>
         <div class="social-links">
-            <a href="#"><i class="fa-solid fa-circle-half-stroke"></i></a>
+            <a href="#" id="light-mode"><i class="fa-solid fa-circle-half-stroke"></i></a>
             <a href="https://github.com/J0rdan-Abbott" target="_blank"><i class="fa-brands fa-git-alt"></i></a>
             <a href="https://www.facebook.com/profile.php?id=100026525924144" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://twitter.com/JordanA62489040" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -39,12 +39,15 @@
 
     <!-- about container -->
     <div class="about-container">
-        <div class="about-content">
-            <h2 class="poppins">Hi! I'm Jordan Abbott;</h2>
-            <h3 class="poppins">a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
-            <div class="about-image">JA</div>
-            <p>I thoroughly enjoy drawing, designing, playing guitar, and coding; especially the front-end!</p>
-            <p>I mostly enjoy the flexability and creativity that comes with CSS, however I also love the strict and fun mathmatical side of things especially in back-end development; both server-side and client-side!</p>
+        <div class="grid-title">
+            <h2 class="poppins about-title">Hi! I'm Jordan Abbott;</h2>
+            <h3 class="poppins about-title-typed">a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
+        </div>
+        <div class="grid-text">
+            <p class="about-content">I thoroughly enjoy drawing, designing, playing guitar, and coding; especially the front-end!</p>
+            <p class="about-content">I mostly enjoy the flexability and creativity that comes with CSS, however I also love the strict and fun mathmatical side of things especially in back-end development; both server-side and client-side!</p>
+        </div>
+        <div class="grid-icons">
             <div class="coding-icons">
                 <img src="/Images/html-logo.png" alt="" class="html-logo">
                 <img src="/Images/css-logo.png" alt="" class="css-logo">
@@ -57,7 +60,12 @@
                 <img src="/Images/git-logo.png" alt="" class="git-logo">
             </div>
         </div>
+        <div class="grid-image">
+            <div class="about-image">JA</div>
+        </div>
     </div>
+
+    <h1 class="projects-title">Some Projects:</h1>
 
     <!-- some projects list -->
     <div class="projects-wrapper">
@@ -91,7 +99,7 @@
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <div class="projects-card">
-                    <img src="/Images/background-light.jpeg" alt="">
+                    <img src="/Images/Leads-tracker-screenshot.png" alt="">
                     <strong>Chrome- <br/> Extension</strong>
                 </div>
             </div>
@@ -152,6 +160,7 @@
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <div class="projects-card">
+                    <img src="/Images/Blackjack-screenshot.png" alt="">
                     <strong>Blackjack</strong>
                 </div>
             </div>
@@ -212,6 +221,7 @@
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <div class="projects-card">
+                    <img src="/Images/Reviews-screenshot.png" alt="">
                     <strong>Reviews</strong>
                 </div>
             </div>
@@ -272,6 +282,7 @@
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <div class="projects-card">
+                    <img src="/Images/Color-flipper-screenshot.png" alt="">
                     <strong>Color- <br/> Flipper</strong>
                 </div>
             </div>
@@ -332,6 +343,7 @@
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <div class="projects-card">
+                    <img src="/Images/Calculator-screenshot.png" alt="">
                     <strong>Calculator</strong>
                 </div>
             </div>
@@ -392,6 +404,7 @@
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <div class="projects-card">
+                    <img src="/Images/Clock-screenshot.png" alt="">
                     <strong>Analogue <br/> Clock</strong>
                 </div>
             </div>
@@ -428,7 +441,7 @@
     <footer class="footer-container">
             <div class="footer-nav">
                 <ul>
-                    <li><a href="/Index/index.html">Home</a></li>
+                    <li><a href="/Index/index.html" class="footer-nav-active">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Work</a></li>

@@ -1,3 +1,4 @@
+// parallax effect
 const parallax = document.getElementById('parallax');
 
 window.addEventListener('scroll', () => {
@@ -5,6 +6,8 @@ window.addEventListener('scroll', () => {
     parallax.style.backgroundPositionY = offset * 0.7 + "px";
 });
 
+
+// typing effect
 const typedTextSpan = document.querySelector('.typed-text');
 const cursorSpan = document.querySelector(".cursor");
 
@@ -25,7 +28,7 @@ function type() {
         cursorSpan.classList.remove("typing");
         setTimeout(erase, newTextDelay);
     }
-}
+};
 
 function erase() {
     if (charIndex > 0) {
@@ -38,9 +41,37 @@ function erase() {
         textArrayIndex++;
         if (textArrayIndex >= textArray.length) textArrayIndex = 0;
         setTimeout(type, typingDelay + 1100);
-    }
-}
+    };
+};
 
 document.addEventListener("DOMContentLoaded", function() {
     if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+// light/dark mode toggle
+let lightMode = localStorage.getItem('lightMode');
+const lightModeToggle = document.querySelector('#light-mode');
+
+const enableLightMode = () => {
+    document.body.classList.add('light-mode');
+    localStorage.setItem('lightMode', 'enabled');
+};
+
+const disableLightMode = () => {
+    document.body.classList.remove('light-mode');
+    localStorage.removeItem('lightMode');
+};
+
+if (lightMode === "enabled") {
+    enableLightMode();
+};
+
+lightModeToggle.addEventListener('click', () => {
+    lightMode = localStorage.getItem('lightMode');
+    if (lightMode !== "enabled") {
+        enableLightMode();
+    } else {
+        disableLightMode();
+    };
 });
