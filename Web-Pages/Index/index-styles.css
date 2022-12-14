@@ -78,6 +78,10 @@ body {
     color: var(--primary-color);
 }
 
+#name-logo {
+    text-decoration: none;
+}
+
 /* navbar */
 .navbar-links ul {
     list-style: none;
