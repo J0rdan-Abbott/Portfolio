@@ -278,20 +278,20 @@ body {
     z-index: -1;
 }
 
-.coding-icons .php-logo {
-    width: 3rem;
+.coding-icons i:nth-child(4) {
+    color: #61dbfb;
+    width: 2rem;
+    margin-right: 0.7rem;
 }
 
 .coding-icons .node-logo {
     width: 3rem;
-    margin-left: 0.8rem;
+    margin-left: 0.6rem;
     margin-right: 0.2rem;
 }
 
-.coding-icons i:nth-child(6) {
-    color: #61dbfb;
-    width: 2rem;
-    margin-right: 0.7rem;
+.coding-icons .mongo-db-logo {
+    width: 2.8rem;
 }
 
 .coding-icons .git-logo {
@@ -364,8 +364,8 @@ body {
 }
 
 .projects-card img {
-    width: 322px;
-    height: 152px;
+    width: 320px;
+    height: 150px;
     border-radius: 1rem;
 }
 
@@ -605,6 +605,31 @@ body {
 .view-live-btn a i {
     color: #fff;
     margin-right: 0.4rem;
+}
+
+/* description of projects */
+.some-projects-desc {
+    max-width: 320px;
+    height: 100%;
+    background: rgba(51, 51, 51, .45);
+    border: var(--borders);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(6px);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.some-projects-desc-title {
+    text-decoration: underline #07e1f5;
+    font-size: 1.5rem;
+}
+
+.some-projects-desc-text {
+    width: 80%;
+    font-size: 0.9rem;
 }
 
 /* footer */
