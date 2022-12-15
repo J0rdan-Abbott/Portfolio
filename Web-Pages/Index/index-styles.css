@@ -303,7 +303,7 @@ body {
 .projects-wrapper {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-row-gap: 5rem;
+    grid-row-gap: 8rem;
     justify-content: space-evenly;
     width: 80%;
     min-height: 100vh;
