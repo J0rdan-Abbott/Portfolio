@@ -25,7 +25,7 @@ body {
 }
 
 .light-mode {
-    --background-image: url(/Images/background-light.jpeg);
+    --background-image: url(/Images/light-background-abstract.jpeg);
     --text-color: #fff;
     --primary-color: #07e1f5;
     --secondary-color: #ff328e;

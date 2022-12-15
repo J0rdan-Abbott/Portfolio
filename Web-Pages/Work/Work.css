@@ -25,7 +25,7 @@ body {
 }
 
 .light-mode {
-    --background-image: url(/Images/background-light.jpeg);
+    --background-image: url(/Images/light-background-abstract.jpeg);
     --text-color: #fff;
     --primary-color: #07e1f5;
     --secondary-color: #ff328e;
@@ -149,6 +149,35 @@ body {
     text-shadow: var(--text-shadow-secondary);
 }
 
+/* work */
+.work-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    margin: auto;
+    background: rgba(51, 51, 51, .45);
+    border: var(--borders);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(6px);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 0.5rem;
+}
+
+.work-title {
+    font-family: poppins;
+    font-size: 2rem;
+    text-decoration: underline #07e1f5;
+    padding: 1rem;
+}
+
+.work-text {
+    width: 95%;
+    font-size: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: 1rem;
+}
 
 
 
