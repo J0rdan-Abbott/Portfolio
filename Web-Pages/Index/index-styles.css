@@ -107,6 +107,22 @@ body {
     text-shadow: var(--text-shadow-secondary);
 }
 
+/* navbar hamburger menu */
+.navbar-open {
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.navbar-open:hover {
+    transform: rotate(-90deg);
+}
+
 @media only screen and (max-width: 1130px) {
     .navbar-container {
         display: flex;
@@ -117,8 +133,26 @@ body {
         order: 3;
     }
 
+    .navbar-links {
+        margin-right: 1rem;
+    }
+
     .social-links {
         visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 986px) {
+    .navbar-links {
+        visibility: hidden;
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+    }
+
+    .navbar-open {
+        visibility: visible;
     }
 }
 
