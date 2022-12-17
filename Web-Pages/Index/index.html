@@ -37,13 +37,34 @@
         </div>
     </nav>
 
-    <div class="navbar-open"><i class="fa-solid fa-bars"></i></div>
+    <div class="navbar-open" onclick="openNav()" title="Open Navigation"><i class="fa-solid fa-bars"></i></div>
+
+    <!-- navbar for hamburger -->
+    <nav class="navbar-container-hamburger">
+        <div class="navbar-close" onclick="closeNav()" title="Close Navigation"><i class="fa-solid fa-xmark"></i></div>
+        <div class="navbar-links-hamburger">
+            <ul>
+                <li><a href="/Index/index.html" class="active-page" title="Home">Home</a></li>
+                <li><a href="/About/About.html" title="About">About</a></li>
+                <li><a href="/Portfolio/Portfolio.html" title="Portfolio">Portfolio</a></li>
+                <li><a href="/Work/Work.html" title="Work">Work</a></li>
+            </ul>
+        </div>
+        <div class="navbar-social-links">
+            <a href="#" id="light-mode-navbar" title="Light/Dark-Mode-Toggle-Button"><i class="fa-solid fa-circle-half-stroke"></i></a>
+            <a href="https://github.com/J0rdan-Abbott" target="_blank" title="Github"><i class="fa-brands fa-git-alt"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100026525924144" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/JordanA62489040" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/jordanabbott22/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jordan-abbott-234383249/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </nav>
 
     <!-- about container -->
-    <div class="about-container">
+    <div class="about-container" id="about-container">
         <div class="grid-title">
-            <h2 class="poppins about-title">Hi! I'm Jordan Abbott;</h2>
-            <h3 class="poppins about-title-typed">a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
+            <h2 class="poppins about-title" id="about-title">Hi! I'm Jordan Abbott;</h2>
+            <h3 class="poppins about-title-typed" id="about-title-typed">a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
         </div>
         <div class="grid-text">
             <p class="about-content">I thoroughly enjoy drawing, designing, playing guitar, and coding; especially the front-end!</p>
@@ -67,14 +88,14 @@
         </div>
     </div>
 
-    <h1 class="projects-title">Some Projects:</h1>
+    <h1 class="projects-title" id="projects-title">Some Projects:</h1>
 
     <!-- some projects list -->
-    <div class="projects-wrapper">
+    <div class="projects-wrapper" id="projects-wrapper">
         
         <!-- 1st project -->
         <div>
-            <div class="projects-card-wrapper">
+            <div class="projects-card-wrapper" id="projects-card-wrapper">
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <span class="card-span"></span>
@@ -105,7 +126,7 @@
                     <strong>Chrome- <br/> Extension</strong>
                 </div>
             </div>
-            <button class="view-live-btn button-style">
+            <button class="view-live-btn button-style" id="button-style" title="View Live">
                 <a href="/Index/Some-Projects/Chrome-Extension/Chrome-Extension.html" target="_blank" title="View Live">
                     <i class="fa-solid fa-eye"></i>View Live
                 </a>
@@ -118,7 +139,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <button class="view-code-btn button-style">
+            <button class="view-code-btn button-style" id="button-style" title="View Code">
                 <a href="https://github.com/J0rdan-Abbott/Portfolio/tree/main/Web-Pages/Index/Some-Projects/Chrome-Extension" target="_blank" title="View Code">
                     <i class="fa-regular fa-file-lines"></i>View Code
                 </a>
@@ -147,7 +168,7 @@
 
         <!-- 2nd project -->
         <div>
-            <div class="projects-card-wrapper">
+            <div class="projects-card-wrapper" id="projects-card-wrapper">
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <span class="card-span"></span>
@@ -178,7 +199,7 @@
                     <strong>Color- <br/> Flipper</strong>
                 </div>
             </div>
-            <button class="view-live-btn button-style" title="View Live">
+            <button class="view-live-btn button-style" id="button-style" title="View Live">
                 <a href="/Index/Some-Projects/Color-Flipper/Color-Flipper.html" target="_blank">
                     <i class="fa-solid fa-eye"></i>View Live
                 </a>
@@ -191,7 +212,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <button class="view-code-btn button-style" title="View Code">
+            <button class="view-code-btn button-style" id="button-style" title="View Code">
                 <a href="https://github.com/J0rdan-Abbott/Portfolio/tree/main/Web-Pages/Index/Some-Projects/Color-Flipper" target="_blank">
                     <i class="fa-regular fa-file-lines"></i>View Code
                 </a>
@@ -208,7 +229,7 @@
 
         <!-- 3rd project -->
         <div>
-            <div class="projects-card-wrapper">
+            <div class="projects-card-wrapper" id="projects-card-wrapper">
                 <span class="card-span"></span>
                 <span class="card-span"></span>
                 <span class="card-span"></span>
@@ -239,7 +260,7 @@
                     <strong>Calculator</strong>
                 </div>
             </div>
-            <button class="view-live-btn button-style" title="View Live">
+            <button class="view-live-btn button-style" id="button-style" title="View Live">
                 <a href="/Index/Some-Projects/Calculator/Calculator.html" target="_blank">
                     <i class="fa-solid fa-eye"></i>View Live
                 </a>
@@ -252,7 +273,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <button class="view-code-btn button-style" title="View Code">
+            <button class="view-code-btn button-style" id="button-style" title="View Code">
                 <a href="https://github.com/J0rdan-Abbott/Portfolio/tree/main/Web-Pages/Index/Some-Projects/Calculator" target="_blank">
                     <i class="fa-regular fa-file-lines"></i>View Code
                 </a>
@@ -276,7 +297,7 @@
 
     <!-- footer -->
     <footer class="footer-container">
-            <div class="footer-nav">
+            <div class="footer-nav" id="footer-nav">
                 <ul>
                     <li><a href="/Index/index.html" class="footer-nav-active" title="Home">Home</a></li>
                     <li><a href="/About/About.html" title="About">About</a></li>

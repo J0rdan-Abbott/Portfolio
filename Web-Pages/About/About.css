@@ -59,10 +59,10 @@ body {
 }
 
 .navbar-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 4rem;
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    max-width: 100vw;
+    min-height: 4rem;
     background: rgba(51, 51, 51, .45);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -75,19 +75,19 @@ body {
 .name-logo {
     font-size: 1.9rem;
     padding: 0.9rem 0 1rem 1rem;
-    color: var(--primary-color);
 }
 
 #name-logo {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 /* navbar */
 .navbar-links ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     font-size: 1.3rem;
-    margin-left: 14rem;
 }
 
 .navbar-links li {
@@ -110,7 +110,8 @@ body {
 /* social links */
 .social-links {
     padding: 1rem;
-    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .social-links a {
@@ -147,6 +148,167 @@ body {
 .social-links a:hover {
     background: var(--secondary-color);
     text-shadow: var(--text-shadow-secondary);
+}
+
+/* navbar hamburger menu */
+.navbar-open {
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.navbar-open:hover {
+    transform: rotate(-90deg);
+}
+
+.navbar-container-hamburger {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-links-hamburger ul li a {
+    padding: 1.5rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    display: block;
+    transition: 0.3s;
+}
+
+.navbar-links-hamburger ul li a:hover {
+    background-color: var(--secondary-color);
+    text-shadow: var(--text-shadow-secondary);
+}
+
+.navbar-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 93%;
+    font-size: 2.5rem;
+    color: red;
+    transition: all 0.4s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.navbar-close:hover {
+    transform: rotate(360deg);
+}
+
+/* navbar social links */
+.navbar-social-links {
+    padding: 1rem;
+    display: flex;
+}
+
+.navbar-social-links a {
+    font-size: 2rem;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s linear;
+    border: var(--borders);
+    margin-left: 0.9rem;
+    color: var(--text-color);
+}
+
+.navbar-social-links a:first-child {
+    padding: 0.6rem 0.7rem;
+    margin-left: auto;
+    order: 6
+}
+
+.navbar-social-links a:nth-child(2) {
+    padding: 0.6rem 0.75rem;
+}
+
+.navbar-social-links a:nth-child(3) {
+    padding: 0.6rem 0.89rem;
+}
+
+.navbar-social-links a:nth-child(5) {
+    padding: 0.6rem 0.7rem;
+}
+
+.navbar-social-links a:last-child {
+    padding: 0.6rem 0.7rem;
+}
+
+.navbar-social-links a:hover {
+    background: var(--secondary-color);
+    text-shadow: var(--text-shadow-secondary);
+}
+
+/* navbar media query */
+@media only screen and (max-width: 1130px) {
+    .navbar-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbar-links {
+        margin-right: 1rem;
+        order: 3;
+    }
+
+    .social-links {
+        visibility: hidden;
+    }
+}
+
+/* navbar media query */
+@media only screen and (max-width: 986px) {
+    .navbar-links {
+        width: 0;
+        visibility: hidden;
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .social-links {
+        width: 0;
+    }
+
+    .navbar-open {
+        visibility: visible;
+    }
+}
+
+/* sidebar close button */
+@media only screen and (max-width: 600px) {
+    .navbar-close {
+        right: 90%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .navbar-close {
+        right: 88%;
+    }
+
+    .navbar-social-links {
+        flex-wrap: wrap;
+    }
+
+    .navbar-social-links a {
+        margin-top: 1rem;
+    }
 }
 
 /* about me */
@@ -238,6 +400,60 @@ body {
     margin-right: 0.7rem;
 }
 
+/* about container media query */
+@media only screen and (max-width: 986px) {
+    #about-container {
+        grid-template-columns: 100%;
+    }
+}
+
+/* about container icons media query */
+@media only screen and (max-width: 550px) {
+    .about-me-icons {
+        flex-wrap: wrap;
+    }
+}
+
+/* about container title media query */
+@media only screen and (max-width: 360px) {
+    #about-me-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* about me media query */
+@media only screen and (max-width: 925px) {
+    .about-me-container {
+        grid-template-rows: 15% 65% 20%;
+    }
+
+    .about-me-text dd {
+        margin: 1rem 0;
+    }
+
+    .about-me-icons {
+        margin-top: 1rem;
+    }
+}
+
+/* about me media query */
+@media only screen and (max-width: 395px) {
+    .about-me-icons {
+        margin-top: 2rem;
+    }
+}
+
+/* about me media query */
+@media only screen and (max-width: 361px) {
+    .about-me-container {
+        grid-template-rows: 13% 67% 20%;
+    }
+
+    .about-me-icons {
+        margin-top: 3rem;
+    }
+}
+
 /* footer */
 .footer-container {
     display: grid;
@@ -260,12 +476,12 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-    margin: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .footer-nav li {
     list-style: none;
-    margin-left: 2rem;
+    padding: 1rem;
 }
 
 .footer-nav li a {
@@ -341,4 +557,30 @@ body {
 .footer-social-links a:hover {
     background: var(--secondary-color);
     text-shadow: var(--text-shadow-secondary);
+}
+
+/* footer media query */
+@media only screen and (max-width: 730px) {
+    .footer-contact {
+        flex-direction: column;
+    }
+
+    .footer-social-links {
+        margin-top: 2rem;
+    }
+}
+
+/* footer media query */
+@media only screen and (max-width: 420px) {
+    #footer-nav ul {
+        font-size: 1rem;
+    }
+}
+
+/* footer media query */
+@media only screen and (max-width: 360px) {
+    #footer-nav ul {
+        font-size: 0.8rem;
+        margin: 1rem 0;
+    }
 }

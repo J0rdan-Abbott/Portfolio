@@ -18,7 +18,7 @@
 
     <!-- navbar -->
     <nav class="navbar-container">
-        <a href="/Index/index.html" id="name-logo"><h1 class="name-logo" title="Jordan Abbott">Jordan Abbott</h1></a>
+        <h1 class="name-logo" title="Jordan Abbott"><a href="/Index/index.html" id="name-logo">Jordan Abbott</a></h1>
         <div class="navbar-links">
             <ul>
                 <li><a href="/Index/index.html" title="Home">Home</a></li>
@@ -37,12 +37,35 @@
         </div>
     </nav>
 
+    <div class="navbar-open" onclick="openNav()" title="Open Navigation"><i class="fa-solid fa-bars"></i></div>
+
+    <!-- navbar for hamburger -->
+    <nav class="navbar-container-hamburger">
+        <div class="navbar-close" onclick="closeNav()" title="Close Navigation"><i class="fa-solid fa-xmark"></i></div>
+        <div class="navbar-links-hamburger">
+            <ul>
+                <li><a href="/Index/index.html" title="Home">Home</a></li>
+                <li><a href="/About/About.html" title="About">About</a></li>
+                <li><a href="/Portfolio/Portfolio.html" class="active-page" title="Portfolio">Portfolio</a></li>
+                <li><a href="/Work/Work.html" title="Work">Work</a></li>
+            </ul>
+        </div>
+        <div class="navbar-social-links">
+            <a href="#" id="light-mode-navbar" title="Light/Dark-Mode-Toggle-Button"><i class="fa-solid fa-circle-half-stroke"></i></a>
+            <a href="https://github.com/J0rdan-Abbott" target="_blank" title="Github"><i class="fa-brands fa-git-alt"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100026525924144" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/JordanA62489040" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/jordanabbott22/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/jordan-abbott-234383249/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </nav>
+
     <!-- 6 best projects -->
     <!-- project 1 -->
 
     <!-- footer -->
     <footer class="footer-container">
-        <div class="footer-nav">
+        <div class="footer-nav" id="footer-nav">
             <ul>
                 <li><a href="/Index/index.html" title="Home">Home</a></li>
                 <li><a href="/About/About.html" title="About">About</a></li>
