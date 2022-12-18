@@ -311,10 +311,400 @@ body {
     }
 }
 
+/* projects */
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 8rem;
+    justify-content: space-evenly;
+    width: 80%;
+    min-height: 100vh;
+    perspective: 1000px;
+    margin: 7rem auto;
+}
 
-/* PROJECTS GO HERE, USE INDEX FOR MEDIA QUERIES ETC... */
+.projects-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 9rem;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
 
+.projects-card-wrapper {
+    width: 320px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+    color: var(--text-color);
+    font-size: 30px;
+    text-transform: uppercase;
+}
 
+.projects-card-wrapper:hover {
+    transition: all 0.3s linear;
+    transform: scale(1.1);
+}
+
+.projects-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: var(--text-color);
+    border-radius: 1rem;
+    transform: rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.projects-card strong {
+    transform: translateZ(50px);
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    text-shadow: 0 0 20px #07e1f5;
+}
+
+.card-span {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    z-index: 1;
+}
+
+.projects-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.card-span:nth-child(1){top: 0; left: 0;}
+.card-span:nth-child(2){top: 0; left: 20%;}
+.card-span:nth-child(3){top: 0; left: 40%;}
+.card-span:nth-child(4){top: 0; left: 60%;}
+.card-span:nth-child(5){top: 0; left: 80%;}
+.card-span:nth-child(6){top: 20%; left: 0;}
+.card-span:nth-child(7){top: 20%; left: 20%;}
+.card-span:nth-child(8){top: 20%; left: 40%;}
+.card-span:nth-child(9){top: 20%; left: 60%;}
+.card-span:nth-child(10){top: 20%; left: 80%;}
+.card-span:nth-child(11){top: 40%; left: 0;}
+.card-span:nth-child(12){top: 40%; left: 20%;}
+.card-span:nth-child(13){top: 40%; left: 40%;}
+.card-span:nth-child(14){top: 40%; left: 60%;}
+.card-span:nth-child(15){top: 40%; left: 80%;}
+.card-span:nth-child(16){top: 60%; left: 0;}
+.card-span:nth-child(17){top: 60%; left: 20%;}
+.card-span:nth-child(18){top: 60%; left: 40%;}
+.card-span:nth-child(19){top: 60%; left: 60%;}
+.card-span:nth-child(20){top: 60%; left: 80%;}
+.card-span:nth-child(21){top: 80%; left: 0;}
+.card-span:nth-child(22){top: 80%; left: 20%;}
+.card-span:nth-child(23){top: 80%; left: 40%;}
+.card-span:nth-child(24){top: 80%; left: 60%;}
+.card-span:nth-child(25){top: 80%; left: 80%;}
+
+.card-span:nth-child(1):hover ~ .projects-card {transform: rotateX(-20deg) rotateY(20deg)}
+.card-span:nth-child(2):hover ~ .projects-card {transform: rotateX(-20deg) rotateY(10deg)}
+.card-span:nth-child(3):hover ~ .projects-card {transform: rotateX(-20deg) rotateY(0deg)}
+.card-span:nth-child(4):hover ~ .projects-card {transform: rotateX(-20deg) rotateY(-10deg)}
+.card-span:nth-child(5):hover ~ .projects-card {transform: rotateX(-20deg) rotateY(-20deg)}
+.card-span:nth-child(6):hover ~ .projects-card {transform: rotateX(-10deg) rotateY(20deg)}
+.card-span:nth-child(7):hover ~ .projects-card {transform: rotateX(-10deg) rotateY(10deg)}
+.card-span:nth-child(8):hover ~ .projects-card {transform: rotateX(-10deg) rotateY(0deg)}
+.card-span:nth-child(9):hover ~ .projects-card {transform: rotateX(-10deg) rotateY(-10deg)}
+.card-span:nth-child(10):hover ~ .projects-card {transform: rotateX(-10deg) rotateY(-20deg)}
+.card-span:nth-child(11):hover ~ .projects-card {transform: rotateX(0deg) rotateY(20deg)}
+.card-span:nth-child(12):hover ~ .projects-card {transform: rotateX(0deg) rotateY(10deg)}
+.card-span:nth-child(13):hover ~ .projects-card {transform: rotateX(0deg) rotateY(0deg)}
+.card-span:nth-child(14):hover ~ .projects-card {transform: rotateX(0deg) rotateY(-10deg)}
+.card-span:nth-child(15):hover ~ .projects-card {transform: rotateX(0deg) rotateY(-20deg)}
+.card-span:nth-child(16):hover ~ .projects-card {transform: rotateX(10deg) rotateY(20deg)}
+.card-span:nth-child(17):hover ~ .projects-card {transform: rotateX(10deg) rotateY(10deg)}
+.card-span:nth-child(18):hover ~ .projects-card {transform: rotateX(10deg) rotateY(0deg)}
+.card-span:nth-child(19):hover ~ .projects-card {transform: rotateX(10deg) rotateY(-10deg)}
+.card-span:nth-child(20):hover ~ .projects-card {transform: rotateX(10deg) rotateY(-20deg)}
+.card-span:nth-child(21):hover ~ .projects-card {transform: rotateX(20deg) rotateY(20deg)}
+.card-span:nth-child(22):hover ~ .projects-card {transform: rotateX(20deg) rotateY(10deg)}
+.card-span:nth-child(23):hover ~ .projects-card {transform: rotateX(20deg) rotateY(0deg)}
+.card-span:nth-child(24):hover ~ .projects-card {transform: rotateX(20deg) rotateY(-10deg)}
+.card-span:nth-child(25):hover ~ .projects-card {transform: rotateX(20deg) rotateY(-20deg)}
+
+/* buttons for some projects */
+.button-style {
+    display: block;
+    width: 90%;
+    padding: 0.6rem;
+    margin: 1rem 1rem 0rem 1rem;
+    cursor: pointer;
+    font-size: 13px;
+    border: none;
+    color: white;
+    background: #333;
+    transition: 0.2s;
+    position: relative;
+}
+
+.button-style:hover {
+    color: var(--primary-color);
+    background: #555;
+    transform: scale(1.1);
+    letter-spacing: 0.1rem;
+}
+
+.button-style:active {
+    transform: scale(1.03);
+}
+
+.button-style span:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 50%;
+    transition: 0.2s;
+    transform: scaleY(0);
+    transition: transform 0.2s;
+    transform-origin: bottom;
+}
+
+.button-style:hover span:nth-child(2) {
+    background: var(--primary-color);
+    transform: scaleY(1);
+}
+
+.button-style span:nth-child(3) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 2px;
+    transition: 0.2s;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: left;
+    transition-delay: 0.1s;
+}
+
+.button-style:hover span:nth-child(3) {
+    background: var(--primary-color);
+    transform: scaleX(1);
+}
+
+.button-style span:nth-child(4) {
+    position: absolute;
+    left: 0;
+    Bottom: 0;
+    width: 2px;
+    height: 50%;
+    transition: 0.2s;
+    transform: scaleY(0);
+    transition: transform 0.2s;
+    transform-origin: top;
+}
+
+.button-style:hover span:nth-child(4) {
+    background: var(--primary-color);
+    transform: scaleY(1);
+}
+
+.button-style span:nth-child(5) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    height: 2px;
+    transition: 0.2s;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: left;
+    transition-delay: 0.1s;
+}
+
+.button-style:hover span:nth-child(5) {
+    background: var(--primary-color);
+    transform: scaleX(1);
+}
+
+.button-style span:nth-child(6) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 50%;
+    transition: 0.2s;
+    transform: scaleY(0);
+    transition: transform 0.2s;
+    transform-origin: bottom;
+}
+
+.button-style:hover span:nth-child(6) {
+    background: var(--primary-color);
+    transform: scaleY(1);
+}
+
+.button-style span:nth-child(7) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    height: 2px;
+    transition: 0.2s;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: right;
+    transition-delay: 0.1s;
+}
+
+.button-style:hover span:nth-child(7) {
+    background: var(--primary-color);
+    transform: scaleX(1);
+}
+
+.button-style span:nth-child(8) {
+    position: absolute;
+    right: 0;
+    Bottom: 0;
+    width: 2px;
+    height: 50%;
+    transition: 0.2s;
+    transform: scaleY(0);
+    transition: transform 0.2s;
+    transform-origin: top;
+}
+
+.button-style:hover span:nth-child(8) {
+    background: var(--primary-color);
+    transform: scaleY(1);
+}
+
+.button-style span:nth-child(9) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    height: 2px;
+    transition: 0.2s;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: right;
+    transition-delay: 0.1s;
+}
+
+.button-style:hover span:nth-child(9) {
+    background: var(--primary-color);
+    transform: scaleX(1);
+}
+
+.view-code-btn a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.view-live-btn a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.view-code-btn a i {
+    color: #fff;
+    margin-right: 0.4rem;
+}
+
+.view-live-btn a i {
+    color: #fff;
+    margin-right: 0.4rem;
+}
+
+/* description of projects */
+.some-projects-desc {
+    max-width: 320px;
+    height: 100%;
+    background: rgba(51, 51, 51, .45);
+    border: var(--borders);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(6px);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.some-projects-desc-title {
+    text-decoration: underline #07e1f5;
+    font-size: 1.5rem;
+}
+
+.some-projects-desc-text {
+    width: 80%;
+    font-size: 0.9rem;
+}
+
+/* some projects media query */
+@media only screen and (max-width: 986px) {
+    #projects-wrapper {
+        grid-template-columns: repeat(1, auto);
+        grid-row-gap: 5rem;
+    }
+
+    .some-projects-desc-text {
+        margin-top: 1rem;
+    }
+}
+
+/* title font sizes media query */
+@media only screen and (max-width: 550px) {
+    #projects-title {
+        font-size: 2rem;
+    }
+
+    #projects-card-wrapper {
+        width: 230px;
+        height: 120px;
+    }
+
+    #projects-card-wrapper strong {
+        font-size: 1.5rem;
+    }
+
+    .some-projects-desc {
+        width: 230px;
+    }
+
+    #button-style {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+}
+
+/* projects media query */
+@media only screen and (max-width: 420px) {
+    #projects-title {
+        font-size: 1.5rem;
+    }
+
+    #projects-card-wrapper {
+        width: 160px;
+        height: 75px;
+    }
+
+    #projects-card-wrapper strong {
+        font-size: 1rem;
+    }
+
+    .some-projects-desc {
+        width: 160px;
+    }
+
+    #button-style {
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+}
 
 /* footer */
 .footer-container {
